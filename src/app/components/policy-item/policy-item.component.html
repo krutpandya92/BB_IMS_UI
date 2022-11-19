@@ -2,42 +2,47 @@
     <!--Card 1-->
     <div class="flex flex-col">
         <span class="flex flex-row">
-            <span>Policy No.</span><span>01234587</span>
+            <span>Policy No. : </span><span>&nbsp;{{policyDataObj.policyNo}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Provider</span><span>LIC</span>
+            <span>Provider : </span><span>&nbsp;{{policyDataObj.providerName}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Type</span><span>Life Insurance</span>
+            <span>Type : </span><span>&nbsp;{{policyDataObj.type}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Nominee</span><span>Person XYZ</span>
+            <span>Nominee : </span><span>&nbsp;{{policyDataObj.nominee}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Issue Date</span><span>01-JAN-2021</span>
+            <span>Issue Date : </span><span>&nbsp;{{policyDataObj.issueDate}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Maturity Date</span><span>01-JAN-2040</span>
+            <span>Maturity Date : </span><span>&nbsp;{{policyDataObj.maturityDate}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Payment Cycle</span><span>Annual</span>
+            <span>Payment Cycle : </span><span>&nbsp;{{policyDataObj.paymentCycle}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Sum Assured</span><span>30,0000</span>
+            <span>Sum Assured : </span><span>&nbsp;{{policyDataObj.sumAssured}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Total Inst. Paid</span><span>10</span>
+            <span>Total Inst. Paid : </span><span>&nbsp;{{policyDataObj.totalInstalmentsPaid}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Last Paid Date</span><span>Annual</span>
+            <span>Last Paid Date : </span><span>&nbsp;{{policyDataObj.lastPaymentDate}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Next Due Date</span><span>01-Mar-2022</span>
+            <span>Next Due Date : </span><span>&nbsp;{{policyDataObj.nextDueDate | date: 'dd-MM-yyyy'}}</span>
         </span>
         <span class="flex flex-row">
-            <span>Next Due Amt.</span><span>20000</span>
+            <span>Next Due Amt. : </span><span>&nbsp;{{policyDataObj.nextDueAmount}}</span>
         </span>
-       
+        <span class="flex flex-row" *ngIf="showPayButton == true">
+            <button (click)="onPayClick('LIC')" class="inline-block px-4 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out py-1.5">Pay Now</button>
+         </span>
+        <span class="flex flex-row" *ngIf="showPayText != '' && showPayText != undefined">
+            <span [ngClass]="{'text-red-600': showPayButton == true, 'text-green-600': showPayButton != true }" class="font-bold">{{showPayText}}</span><span></span>
+         </span>
        
     </div>
     
