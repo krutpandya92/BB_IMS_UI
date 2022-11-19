@@ -1,80 +1,21 @@
-<nav class="bg-gray-100 px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 border-b border-gray-200">
-    <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="https://flowbite.com/" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Logo">
+<nav class="sticky top-0 left-0 z-20 w-full px-2 bg-gray-100 border-b border-gray-200 sm:px-4">
+    <div class="flex flex-wrap items-center justify-between mx-auto">
+        <a routerLink="/" class="flex items-center">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-4 mr-3 sm:h-6" alt="Logo">
             <span class="self-center text-xl font-semibold whitespace-nowrap">Logo</span>
         </a>
         <div class="flex gap-3 md:order-2">
-            <button type="button" (click)="dropdownToggle(notificationDropdownOpened)"
-                class="relative inline-flex items-center justify-center w-8 h-8 p-2 text-xs font-medium text-gray-700 bg-white rounded-lg toggle-full-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-                </svg>
-                <div [ngClass]="{ 'hidden' : !notificationDropdownOpened}"
-                    class="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow top-[calc(100%+4px)] right-0 w-auto">
-                    <ul class="py-1 text-sm text-gray-700">
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Earnings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Sign out</a>
-                        </li>
-                    </ul>
-                </div>
-            </button>
-            <button type="button" (click)="dropdownToggle(setitngDropdownOpened)"
-                class="relative inline-flex items-center justify-center w-8 h-8 p-2 text-xs font-medium text-gray-700 bg-white rounded-lg toggle-full-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path
-                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                </svg>
-                <div [ngClass]="{ 'hidden' : !setitngDropdownOpened}"
-                    class="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow top-[calc(100%+4px)] right-0 w-auto"
-                    [hidden]="settingDropdownClosed">
-                    <ul class="py-1 text-sm text-gray-700">
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Earnings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Sign out</a>
-                        </li>
-                    </ul>
-                </div>
-            </button>
-            <button type="button" (click)="dropdownToggle(profileDropdownOpened)"
-                class="relative inline-flex items-center justify-center w-8 h-8 p-2 text-xs font-medium text-gray-700 bg-white rounded-lg toggle-full-view hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 focus:outline-none">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                </svg>
+            <button type="button" (click)="profileDropdownToggle()" class="relative">
+                <img type="button" class="object-cover w-8 h-8 rounded-full cursor-pointer"
+                    src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
                 <div [ngClass]="{ 'hidden' : !profileDropdownOpened}"
                     class="absolute z-10 bg-white divide-y divide-gray-100 rounded shadow top-[calc(100%+4px)] right-0 w-auto">
-                    <ul class="py-1 text-sm text-gray-700">
+                    <ul class="py-1 text-xs text-gray-700">
                         <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Dashboard</a>
+                            <a href="#" class="block px-6 py-1 hover:bg-gray-100">Profile</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Earnings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-8 py-2 hover:bg-gray-100">Sign out</a>
+                            <a href="#" class="block px-6 py-1 hover:bg-gray-100">Settings</a>
                         </li>
                     </ul>
                 </div>
@@ -103,20 +44,20 @@
                 class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-gray-100">
                 <li>
                     <a href="#"
-                        class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                        aria-current="page">Home</a>
+                        class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0">
+                        Home
+                    </a>
                 </li>
                 <li>
                     <a href="#"
-                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</a>
+                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                        Statistics
+                    </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Services</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
+                    <a href="#" class="px-4 py-1.5 text-white bg-blue-500 rounded-full hover:bg-blue-700">
+                        Plan for buy Policy ?
+                    </a>
                 </li>
             </ul>
         </div>

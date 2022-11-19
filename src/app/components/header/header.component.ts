@@ -11,9 +11,6 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   mobileMenuClosed: boolean = true;
-  settingDropdownClosed: boolean = true;
-  notificationDropdownOpened: boolean = false;
-  setitngDropdownOpened: boolean = false;
   profileDropdownOpened: boolean = false;
 
   constructor(private _eref: ElementRef) { }
@@ -22,14 +19,12 @@ export class HeaderComponent implements OnInit {
     this.mobileMenuClosed = !this.mobileMenuClosed
   }
 
-  dropdownToggle(dropdownRef: any) {
-    dropdownRef = !dropdownRef;
+  profileDropdownToggle() {
+    this.profileDropdownOpened = !this.profileDropdownOpened;
   }
 
   documentClick(event: any) {
     if (!this._eref.nativeElement.contains(event.target)) {
-      this.notificationDropdownOpened = false;
-      this.setitngDropdownOpened = false;
       this.profileDropdownOpened = false;
     }
   }

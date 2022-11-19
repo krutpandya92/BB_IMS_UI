@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { PolicyListComponent } from './components/policy-list/policy-list.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { Routes } from '@angular/router';
+import { SearchComponent } from './components/shared/search/search.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -23,11 +25,14 @@ const routes: Routes = [
     DashboardComponent,
     LayoutComponent,
     HeaderComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DashboardModule
+    DashboardModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
