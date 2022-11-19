@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { LayoutComponent } from './views/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
-import { PolicyListComponent } from './components/policy-list/policy-list.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { Routes } from '@angular/router';
 import { SearchComponent } from './components/shared/search/search.component';
