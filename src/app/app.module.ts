@@ -12,8 +12,8 @@ import { Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
-    component: PolicyListComponent,
+    path: "dashboard",
+    loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
 ];
 
