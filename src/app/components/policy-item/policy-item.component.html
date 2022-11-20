@@ -1,7 +1,34 @@
-<div class="p-4 border-solid border-indigo-400">
+<div class="lg:container md-auto p-2 border-solid border-indigo-400">
     <!--Card 1-->
-    <div class="flex flex-col">
-        <span class="flex flex-row">
+    <div class="flex flex-col border-blue-600 border-2 rounded-xl py-2 px-4">
+        <table>
+            <tr>
+                <td class="text-sm flex flex-col items-center">
+                    <i class="fa fa-heartbeat text-red-600" aria-hidden="true"></i><br>
+                    <span
+                        class="bg-red-100 text-center text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{{policyDataObj.type}}</span>
+                </td>
+                <td class="text-sm"> <span>Policy No.</span><br><span>{{policyDataObj.policyNo}}</span></td>
+                <td class="text-sm"><span>Sum Assured</span><br><span>&#x20b9;&nbsp;{{policyDataObj.sumAssured}}</span>
+                </td>
+                <td class="text-sm"><span>Insured Period</span><br><span>{{policyDataObj.issueDate |date:'dd-MMM-yy'}}
+                        to {{policyDataObj.maturityDate |date:'dd-MMM-yy'}}</span></td>
+                <td class="text-sm"><span>Provider</span><br><span>{{policyDataObj.providerName}}</span></td>
+                <td class="text-sm"><span>Last Paid <span style="cursor: pointer;"
+                            title="Total premium installments paid"
+                            class="bg-green-100 text-center text-green-800 text-xs font-semibold mr-2 px-1 py-0.5 rounded dark:bg-green-200 dark:text-green-900">{{policyDataObj.totalInstalmentsPaid}}</span></span><br><span>{{policyDataObj.lastPaymentDate
+                        | date:'dd-MMM-yy'}}
+                    </span>
+                </td>
+                <td class="text-sm"><span>Next Due</span><br><span
+                        class="bg-red-100 text-center text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">{{policyDataObj.nextDueDate
+                        | date:'dd-MMM-yy'}} |
+                        &#x20b9;&nbsp;{{policyDataObj.nextDueAmount}}</span></td>
+                <td class="text-sm"></td>
+            </tr>
+
+        </table>
+        <!-- <span class="flex flex-row">
             <span>Policy No. : </span><span>&nbsp;{{policyDataObj.policyNo}}</span>
         </span>
         <span class="flex flex-row">
@@ -9,9 +36,6 @@
         </span>
         <span class="flex flex-row">
             <span>Type : </span><span>&nbsp;{{policyDataObj.type}}</span>
-        </span>
-        <span class="flex flex-row">
-            <span>Nominee : </span><span>&nbsp;{{policyDataObj.nominee}}</span>
         </span>
         <span class="flex flex-row">
             <span>Issue Date : </span><span>&nbsp;{{policyDataObj.issueDate}}</span>
@@ -43,7 +67,7 @@
         <span class="flex flex-row" *ngIf="showPayText != '' && showPayText != undefined">
             <span [ngClass]="{'text-red-600': showPayButton == true, 'text-green-600': showPayButton != true }" class="font-bold">{{showPayText}}</span><span></span>
          </span>
-       
+        -->
     </div>
-    
-  </div>
+
+</div>

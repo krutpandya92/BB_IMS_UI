@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppRoutingModule } from 'src/app/app-routing.module';
 import { BuyPlanSuggestionComponent } from 'src/app/components/buy-plan-suggestion/buy-plan-suggestion.component';
 import { PolicyItemComponent } from 'src/app/components/policy-item/policy-item.component';
 import { PolicyListComponent } from 'src/app/components/policy-list/policy-list.component';
@@ -45,4 +44,4 @@ const routes: Routes = [
   ],
   providers: [],
 })
-export class DashboardModule { }
+export class DashboardModule {}
