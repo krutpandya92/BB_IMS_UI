@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import data from './../../config/data.json';
 
 @Component({
   selector: 'app-statistics',
@@ -57,7 +56,7 @@ export class StatisticsComponent implements OnInit {
   providerPieChartGraph: any = {
     results: [
       {
-        "name": data?.providerName,
+        "name": "LIC",
         "value": 30
       },
       {
