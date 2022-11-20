@@ -1,5 +1,5 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { BuyPlanSuggestionComponent } from 'src/app/components/buy-plan-suggestion/buy-plan-suggestion.component';
@@ -29,7 +29,7 @@ const routes: Routes = [
     BuyPlanSuggestionComponent,
     StatisticsComponent,
   ],
-  imports: [BrowserModule, RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes), CommonModule],
   exports: [
     PolicyListComponent,
     PolicyItemComponent,
@@ -39,4 +39,4 @@ const routes: Routes = [
   ],
   providers: [],
 })
-export class DashboardModule {}
+export class DashboardModule { }
