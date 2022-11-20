@@ -9,7 +9,7 @@ import { StatisticsComponent } from 'src/app/components/statistics/statistics.co
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'policy',
     component: PolicyListComponent,
   },
   {

@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SearchComponent } from './components/shared/search/search.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DashboardModule,
     ReactiveFormsModule,
     FormsModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
