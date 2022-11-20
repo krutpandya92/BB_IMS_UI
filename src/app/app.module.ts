@@ -11,6 +11,7 @@ import { SearchComponent } from './components/shared/search/search.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     FormsModule,
     AuthModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

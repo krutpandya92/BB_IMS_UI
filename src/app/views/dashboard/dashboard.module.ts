@@ -6,6 +6,7 @@ import { BuyPlanSuggestionComponent } from 'src/app/components/buy-plan-suggesti
 import { PolicyItemComponent } from 'src/app/components/policy-item/policy-item.component';
 import { PolicyListComponent } from 'src/app/components/policy-list/policy-list.component';
 import { StatisticsComponent } from 'src/app/components/statistics/statistics.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 const routes: Routes = [
   {
@@ -29,7 +30,12 @@ const routes: Routes = [
     BuyPlanSuggestionComponent,
     StatisticsComponent,
   ],
-  imports: [RouterModule.forChild(routes), CommonModule],
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule,
+    NgxChartsModule,
+
+  ],
   exports: [
     PolicyListComponent,
     PolicyItemComponent,

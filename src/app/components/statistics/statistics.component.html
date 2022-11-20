@@ -1,1 +1,21 @@
-<p>statistics works!</p>
+<div class="container mx-auto">
+    <div class="grid md:grid-cols-3">
+        <ngx-charts-bar-vertical [results]="barGraph?.results" [view]="barGraph?.view" [xAxis]="barGraph?.xAxis"
+            [yAxis]="barGraph?.yAxis" [yScaleMax]="barGraph?.yScaleMax" [yScaleMin]="barGraph?.yScaleMin"
+            [showXAxisLabel]="barGraph?.showXAxisLabel" [showYAxisLabel]="barGraph?.showYAxisLabel"
+            [xAxisLabel]="barGraph?.xAxisLabel" [yAxisLabel]="barGraph?.yAxisLabel" [legend]="barGraph?.legend"
+            [legendTitle]="barGraph?.legendTitle" [legendPosition]="barGraph?.legendPosition"
+            [roundEdges]="barGraph?.roundEdges" [barPadding]="barGraph?.barPadding" [gradient]="barGraph?.gradient">
+        </ngx-charts-bar-vertical>
+        <ngx-charts-pie-chart [view]="providerPieChartGraph?.view" [results]="providerPieChartGraph?.results"
+            [gradient]="providerPieChartGraph?.gradient" [legend]="providerPieChartGraph?.legend"
+            [legendPosition]="providerPieChartGraph?.legendPosition" [labels]="providerPieChartGraph?.labels"
+            [doughnut]="providerPieChartGraph?.doughnut" [legendTitle]="providerPieChartGraph?.legendTitle">
+        </ngx-charts-pie-chart>
+        <ngx-charts-pie-chart [view]="categoryPieChartGraph?.view" [results]="categoryPieChartGraph?.results"
+            [gradient]="categoryPieChartGraph?.gradient" [legend]="categoryPieChartGraph?.legend"
+            [legendPosition]="categoryPieChartGraph?.legendPosition" [labels]="categoryPieChartGraph?.labels"
+            [doughnut]="categoryPieChartGraph?.doughnut" [legendTitle]="categoryPieChartGraph?.legendTitle">
+        </ngx-charts-pie-chart>
+    </div>
+</div>
