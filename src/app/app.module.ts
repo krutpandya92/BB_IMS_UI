@@ -7,16 +7,8 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { LayoutComponent } from './views/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
-import { Routes } from '@angular/router';
 import { SearchComponent } from './components/shared/search/search.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
-const routes: Routes = [
-  {
-    path: "dashboard",
-    loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
-  },
-];
 
 @NgModule({
   declarations: [
@@ -31,9 +23,9 @@ const routes: Routes = [
     AppRoutingModule,
     DashboardModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

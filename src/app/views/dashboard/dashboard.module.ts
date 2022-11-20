@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { BuyPlanSuggestionComponent } from 'src/app/components/buy-plan-suggestion/buy-plan-suggestion.component';
 import { PolicyItemComponent } from 'src/app/components/policy-item/policy-item.component';
@@ -9,16 +9,16 @@ import { StatisticsComponent } from 'src/app/components/statistics/statistics.co
 
 const routes: Routes = [
   {
-    path: "",
-    component: PolicyListComponent
+    path: '',
+    component: PolicyListComponent,
   },
   {
-    path: "statistics",
-    component: StatisticsComponent
+    path: 'statistics',
+    component: StatisticsComponent,
   },
   {
-    path: "buy-suggestion",
-    component: BuyPlanSuggestionComponent
+    path: 'buy-suggestion',
+    component: BuyPlanSuggestionComponent,
   },
 ];
 
@@ -27,20 +27,16 @@ const routes: Routes = [
     PolicyListComponent,
     PolicyItemComponent,
     BuyPlanSuggestionComponent,
-    StatisticsComponent
+    StatisticsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
+  imports: [BrowserModule, RouterModule.forChild(routes)],
   exports: [
     PolicyListComponent,
     PolicyItemComponent,
     BuyPlanSuggestionComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    RouterModule,
   ],
   providers: [],
 })
-export class DashboardModule {
-
-}
+export class DashboardModule {}
