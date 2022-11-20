@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import data from './../../config/data.json';
 
 @Component({
   selector: 'app-statistics',
@@ -9,6 +10,8 @@ export class StatisticsComponent implements OnInit {
 
   providerArray: any;
   constructor() { }
+
+  policyDataList: any = data;
 
   ngOnInit(): void {
   }
