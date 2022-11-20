@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { SearchComponent } from './components/shared/search/search.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AuthModule } from './auth/auth.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DashboardModule,
     ReactiveFormsModule,
     FormsModule,
+    AuthModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
