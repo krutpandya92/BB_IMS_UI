@@ -6,6 +6,8 @@ import { BuyPlanSuggestionComponent } from 'src/app/components/buy-plan-suggesti
 import { PolicyItemComponent } from 'src/app/components/policy-item/policy-item.component';
 import { PolicyListComponent } from 'src/app/components/policy-list/policy-list.component';
 import { StatisticsComponent } from 'src/app/components/statistics/statistics.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
@@ -29,7 +31,12 @@ const routes: Routes = [
     BuyPlanSuggestionComponent,
     StatisticsComponent,
   ],
-  imports: [BrowserModule, RouterModule.forChild(routes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forChild(routes),
+    BrowserAnimationsModule,
+    NgxChartsModule,
+  ],
   exports: [
     PolicyListComponent,
     PolicyItemComponent,
@@ -39,4 +46,4 @@ const routes: Routes = [
   ],
   providers: [],
 })
-export class DashboardModule {}
+export class DashboardModule { }
