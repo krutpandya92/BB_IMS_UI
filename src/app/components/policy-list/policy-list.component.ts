@@ -10,7 +10,7 @@ import data from './../../config/data.json';
 export class PolicyListComponent implements OnInit {
   policyDataList: policyItem[] = data;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
